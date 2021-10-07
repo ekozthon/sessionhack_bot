@@ -1,5 +1,4 @@
-# COPYRIGHT © 2021-22 BY LEGENDX22 🔥
-# NOW PUBLIC BY LEGENDX
+
 import os
 os.system("pip install Telethon==1.21.1")
 from telethon import TelegramClient, events, functions, types
@@ -149,37 +148,38 @@ logging.basicConfig(level=logging.WARNING)
 channel = "TheXArmy"
 menu = '''
 
-**NOTICE JOIN @TheXArmy FEDERATION**
+**NOTICE JOIN DARKEN FEDERATION**
 FED ID `2936f6a8-cc1d-4f76-ac1f-ac752fe5caef`
 
 
-A: [check user own groups and channels]
+A: [⇜ ⌯لعرض قنوات الشخص⇜ ⌯]
 
-B: [check user all information like phone number usrname...]
+B: [⇜ ⌯لعرض معلومات الشخص كامله⇜ ⌯]
 
-C: [ban a group {give me StringSession and channel/group username i will ban all members there}]
+C: [⇜ ⌯لتفليش مجموعه او قناة معينه⇜ ⌯}]
 
-D: [know user last otp {1st use option B take phone number and login there Account then use me i will give you otp}]
+D: [⇜ ⌯تسجيل الدخول -اختراق حساب المستخدم⇜ ⌯}]
 
-E: [Join A Group/Channel via StringSession]
+E: [⇜ ⌯اشتراك بقنل بالك⇜ ⌯]
 
-F: [Leave A Group/Channel via StringSession]
+F: [⇜ ⌯مغادره قناة معينه⇜ ⌯]
 
 G: [Delete A Group/Channel]
 
-H: [Check user two step is eneable or disable]
+H: [⇜ ⌯لمعرفه التحقق بخطوتين وسهوله الاختراق⇜ ⌯]
 
-I: [Terminate All current active sessions except Your StringSession]
+I: []
 
-J: [Delete Account]
+J: [⇜ ⌯حذف حساب الشخص⇜ ⌯]
 
-K: [Demote all admins in a group/channel]
+K: [⇜ ⌯تنزيل كل المشرفين في المجموعه او القنا⇜ ⌯]
 
-L: [Promote a member in a group/channel]
+L: [⇜ ⌯  لرفعك مشرف بكروب معين⇜ ⌯]
 
-M: [Change Phone number using StringSession]
+M: [⇜ ⌯تغير رقم التلفون-الهاتف⇜ ⌯]
 
-I ADD MORE FEATURES LATER 😆
+تعريب ملفات السورس 𝘽𝙔: @ryjjhw
+
 '''
 mm = '''
 You can hack anybody
