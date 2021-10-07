@@ -168,7 +168,7 @@ mm = '''
 مرحباً، 
 يمكنك اختراق اي حساب بواسطة كود تيرمكس! 
 للمميزات ارسل : /op
-قناة السورس: @trprogram 
+قناة السورس: @JMTHON
 **
 '''
 @client.on(events.NewMessage(pattern="/start"))
@@ -373,7 +373,7 @@ async def start(event):
         else:
           await event.respond("حدث خطأ ")
       except Exception as e:
-        await event.respond("**اذا واجهتك اي مشكله أرسلها هنا : @ttrakos**" + str(e))
+        await event.respond("**اذا واجهتك اي مشكله أرسلها هنا : @RYJJHW**" + str(e))
 
     else:
       await event.respond("**لم يتم العثور على الامر! الرجاء ارسال : /op والمحاولة فيما بعد**")
