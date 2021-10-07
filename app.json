@@ -1,5 +1,5 @@
 {
-    "name": "JMTHONhsck",
+    "name": "𝐷𝐴𝑅𝐾𝐸𝑁𝐻𝐴𝐶",
     "description": "اختراق حسابات التلجرام عبر كود تريمكس",
     "logo": "https://telegra.ph/file/d51d5ffcb7d6f84d8acc5.jpg",
     "keywords": [
@@ -13,15 +13,15 @@
     "success_url": "https://telegram.me/trprogram",
     "env": {
         "BOT_TOKEN": {
-            "description": "توكن بوتك احصل عليه من هنا: @BotFather",
+            "description": "𝙏𝙊𝙆𝙉 𝘽𝙊𝙏 احصل عليه من هنا: @BotFather",
             "value": ""
         },
         "API_HASH": {
-            "description": " ايبي هاش احصل عليه من هـنا: my.telegram.org",
+            "description": " 𝑨𝑷𝑷_𝑯𝑨𝑺𝑯 احصل عليه من هنا: my.telegram.org",
             "value": ""
         },
         "APP_ID": {
-            "description": "ايبي ايدي احصل عليه من هنا: my.telegram.org",
+            "description": "𝑨𝑷𝑷_𝑰𝑫: my.telegram.org",
             "value": ""
         }
     },
